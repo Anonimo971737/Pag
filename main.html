@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi novia?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            margin: 0;
+            background-image: url('fondo2.jpeg'); /* Cambia 'fondo2.jpeg' por la ruta de tu imagen */
+            background-repeat: repeat;
+            background-size: 43%;
+            color: white;
+        }
+        .container {
+            text-align: center;
+            background: rgba(0, 128, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¿Quieres ser mi novia?</h1>
+        <button onclick="respuesta('sí')">Sí</button>
+        <button onclick="respuesta('no')">No</button>
+    </div>
+
+    <script>
+        function respuesta(opcion) {
+            if (opcion === 'sí') {
+                window.location.href = 'mensaje.html'; // Redirige a la página de mensaje
+            } else {
+                alert('Está bien, quizás otra vez.');
+            }
+        }
+    </script>
+</body>
+</html>

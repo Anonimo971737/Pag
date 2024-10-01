@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificación de Nombre</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Ocupa toda la altura de la ventana */
+            width: 100%; /* Ocupa todo el ancho */
+            margin: 0;
+            background-image: url('fondo.jpeg'); /* Cambia 'fondo.jpeg' por la ruta de tu imagen */
+            background-repeat: repeat; /* Repite la imagen si es más pequeña */
+            background-size: 24%; /* Ajusta el tamaño de la imagen */
+            color: white;
+        }
+        .container {
+            text-align: center;
+            background: rgba(0, 128, 0, 0.7); /* Fondo verde más oscuro */
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px; /* Ancho máximo para mantenerlo compacto */
+            width: 90%; /* Se adapta a pantallas pequeñas */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Añade sombra para resaltar el contenedor */
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+            width: calc(100% - 20px); /* Se adapta al contenedor */
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ingresa el nombre del amor de mi vida</h1>
+        <input type="text" id="nombre" placeholder="Nombre completo">
+        <button onclick="verificarNombre()">Verificar</button>
+    </div>
+
+    <script>
+        function verificarNombre() {
+            const nombreIngresado = document.getElementById('nombre').value;
+            const nombreCorrecto = "Sofía Mariluz Sánchez";
+            
+            if (nombreIngresado === nombreCorrecto) {
+                window.location.href = 'main.html'; // Redirige a la segunda página
+            } else {
+                alert('Nombre incorrecto. Intenta de nuevo.');
+            }
+        }
+    </script>
+</body>
+</html>
